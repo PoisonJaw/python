@@ -2,17 +2,22 @@ ore_pe_zi = 24
 in_ce_masoara = "ore"
 
 def zile_la_ore(numar_de_zile):
-    if numar_de_zile > 0:
         return f"{numar_de_zile} de zile sunt {numar_de_zile * ore_pe_zi} {in_ce_masoara}"
 
-    elif numar_de_zile == 0:
-        return f"Ig 0 works too in orice caz {numar_de_zile} de zile sunt {numar_de_zile * ore_pe_zi} {in_ce_masoara}"
+
+def calcule():
+    try:
+
+        numarul_scris_userului = int(inputul_userului)
+        if numarul_scris_userului > 0:
+            rezultat = zile_la_ore(numarul_scris_userului)
+            print(rezultat)
+        elif numarul_scris_userului == 0:
+            print("e zero")
+    except:
+        ValueError
+        print("Numarul invalid")
 
 
-inputul_userului = input("pune numarul de zile\n")
-if inputul_userului.isdigit():
-    numarul_scris_userului = int(inputul_userului)
-    rezultat = zile_la_ore(numarul_scris_userului)
-    print(rezultat)
-else:
-    print("ce ati tapat nu este un numar valid ")
+inputul_userului  = input("pune numarul de zile\n")
+calcule()
