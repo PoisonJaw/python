@@ -1,6 +1,5 @@
 ore_pe_zi = 24
 in_ce_masoara = "ore"
-
 def zile_la_ore(numar_de_zile):
         return f"{numar_de_zile} de zile sunt {numar_de_zile * ore_pe_zi} {in_ce_masoara}"
 inputul_userului = ""
@@ -20,5 +19,7 @@ def calcule():
 
 while inputul_userului != "iesire":
     inputul_userului = input("pune numarul de zile\n")
-    for inputul_userului_element in inputul_userului.split(","):
+    lista_de_zile = inputul_userului.split(",")
+    for inputul_userului_element in set(lista_de_zile):
         calcule()
+
