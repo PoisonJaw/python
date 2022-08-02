@@ -29,3 +29,4 @@ while inputul_userului != "iesire":
     print(dictionary_lista_zile_unitati)
     calcule()
 
+.
